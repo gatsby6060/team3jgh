@@ -20,13 +20,13 @@ public class TableController {
 	@Autowired
 	TableService tableService;
 	
-	@RequestMapping("sample-list.do")
+	@RequestMapping("/sample.do")
 	public String login(Model model) throws Exception {
 
 		return "default"; // .jsp빠진형태
 	}
 	
-	@RequestMapping(value = "/sample/list.dox", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/sample-list.dox", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	@ResponseBody
 	public String bbsdelete(Model model, @RequestParam HashMap<String, Object> map) throws Exception {
 		HashMap<String, Object> resultMap = new HashMap<String, Object>();

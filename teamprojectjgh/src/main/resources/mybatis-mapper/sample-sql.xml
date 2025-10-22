@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.teamprojectjgh.mapper.table">
+<mapper namespace="com.example.teamprojectjgh.mapper.TableMapper">
 
 	<select id="selectTableList" parameterType="hashmap" resultType="com.example.teamprojectjgh.model.Table">
        select * from table1

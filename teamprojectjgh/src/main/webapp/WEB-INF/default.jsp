@@ -43,7 +43,7 @@
                 let self = this;
                 let param = {};
                 $.ajax({
-                    url: "",
+                    url: "/sample-list.dox",
                     dataType: "json",
                     type: "POST",
                     data: param,
@@ -56,7 +56,7 @@
         mounted() {
             // 처음 시작할 때 실행되는 부분
             let self = this;
-			
+			self.fnList();
         }
     });
 
