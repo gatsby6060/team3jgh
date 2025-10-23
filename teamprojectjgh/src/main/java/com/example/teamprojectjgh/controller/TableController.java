@@ -23,7 +23,7 @@ public class TableController {
 	@RequestMapping("/sample.do")
 	public String login(Model model) throws Exception {
 
-		return "default"; // .jsp빠진형태
+		return "default"; // .jsp빠진형태//////
 	}
 	
 	@RequestMapping(value = "/sample-list.dox", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
