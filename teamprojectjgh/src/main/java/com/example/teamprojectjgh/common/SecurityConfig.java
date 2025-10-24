@@ -27,7 +27,7 @@ public class SecurityConfig {
          .httpBasic(basic -> basic.disable())
          .headers(headers -> headers.cacheControl(cache -> cache.disable()))
          ; // HTTP Basic 인증 비활성화
-
+     /////////////////////////////////////////
      return http.build();
  }
 }
