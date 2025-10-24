@@ -23,6 +23,7 @@ public class TableController {
 	@RequestMapping("/sample.do")
 	public String login(Model model) throws Exception {
 
+		// 테스트중입니니다 전경환 1일차 완료
 		return "default"; // .jsp빠진형태//////
 	}
 	
