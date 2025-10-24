@@ -22,7 +22,7 @@ public class TableController {
 	
 	@RequestMapping("/sample.do")
 	public String login(Model model) throws Exception {
-
+		System.out.println("hi");
 		return "default"; // .jsp빠진형태//////
 	}
 	
