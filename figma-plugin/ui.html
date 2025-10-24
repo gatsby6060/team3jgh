@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html, body { margin: 0; padding: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto; }
+      .wrap { padding: 16px; }
+      h1 { font-size: 14px; margin: 0 0 12px; }
+      .desc { font-size: 12px; color: #6b7280; line-height: 1.5; margin-bottom: 12px; }
+      button { width: 100%; padding: 10px 12px; border: none; background: #155EEF; color: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+      button.secondary { background: #e5e7eb; color: #111827; }
+      button + button { margin-top: 8px; }
+      .small { font-size: 11px; color: #9ca3af; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>TeamProject Starter Kit</h1>
+      <p class="desc">Generate pages, styles, and basic components (button, input) into the current file.</p>
+      <button id="generate">Generate starter kit</button>
+      <button id="cancel" class="secondary">Close</button>
+      <div class="small">Inter font will be loaded automatically.</div>
+    </div>
+    <script>
+      const gen = document.getElementById('generate');
+      const cancel = document.getElementById('cancel');
+      gen.addEventListener('click', () => parent.postMessage({ pluginMessage: { type: 'generate' } }, '*'));
+      cancel.addEventListener('click', () => parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*'));
+
+      onmessage = (event) => {
+        const { type } = event.data.pluginMessage || {};
+        if (type === 'done') {
+          // no-op
+        }
+      };
+    </script>
+  </body>
+</html>
